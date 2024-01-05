@@ -1,0 +1,12 @@
+profile_for_local_deployment:
+  target: dev
+  outputs:
+    dev:
+    dev:
+      type: postgres
+      host: ${POSTGRES_HOST}
+      user: ${POSTGRES_USER}
+      password: ${POSTGRES_PASSWORD}
+      dbname: ${POSTGRES_DB}
+      port: ${POSTGRES_PORT}
+      schema: ${POSTGRES_SCHEMA}
