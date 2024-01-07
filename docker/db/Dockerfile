@@ -11,7 +11,7 @@ COPY .env .env
 ENV $(cat .env | xargs)
 
 # Copy the initialization SQL script to the container
-COPY init.sql /docker-entrypoint-initdb.d/
+COPY db/init.sql /docker-entrypoint-initdb.d/init.sql
 
 # Expose the default PostgreSQL port
 EXPOSE ${POSTGRES_PORT}
