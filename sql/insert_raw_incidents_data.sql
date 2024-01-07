@@ -1,4 +1,4 @@
-INSERT INTO raw_incidents (
+INSERT INTO test.raw_incidents (
     incident_number,
     exposure_number,
     id,

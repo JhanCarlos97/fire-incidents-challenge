@@ -4,6 +4,9 @@ FROM python:3.8-slim
 # Set the working directory in the container
 WORKDIR /usr/src/app
 
+# Copy the current directory contents into the container
+COPY . .
+
 # Install cron
 RUN apt-get update && apt-get install -y cron
 

@@ -2,7 +2,6 @@ profile_for_local_deployment:
   target: dev
   outputs:
     dev:
-    dev:
       type: postgres
       host: ${POSTGRES_HOST}
       user: ${POSTGRES_USER}

@@ -9,11 +9,11 @@ def connect_to_postgre():
 
     # Define the PostgreSQL connection parameters
     db_params = {
-        'host': os.getenv('POSTGRES_HOST'),
+        'host': 'postgres',
         'user': os.getenv('POSTGRES_USER'),
         'password': os.getenv('POSTGRES_PASSWORD'),
         'database': os.getenv('POSTGRES_DB'),
-        'schema': os.getenv('POSTGRES_SCHEMA')
+        'port': os.getenv('POSTGRES_PORT')
     }
 
     # Connect to the PostgreSQL database

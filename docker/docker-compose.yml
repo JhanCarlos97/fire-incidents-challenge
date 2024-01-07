@@ -17,4 +17,6 @@ services:
     volumes:
       - ../scripts:/usr/src/app/scripts
       - ./requirements.txt:/usr/src/app/requirements.txt
+      - .env:/usr/src/app/.env
+      - ../sql:/usr/src/app/sql
     command: ["cron", "-f"]
