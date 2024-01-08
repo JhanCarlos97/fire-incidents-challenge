@@ -2,6 +2,7 @@ version: 2
 
 sources:
   - name: incidents
+    schema: "{{ env_var('POSTGRES_SCHEMA') }}"
     tables:
       - name: raw_incidents
         description: "Raw data from the incidents table"

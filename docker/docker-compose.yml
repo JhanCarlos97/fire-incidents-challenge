@@ -14,9 +14,20 @@ services:
     build:
       context: .
       dockerfile: cron/Dockerfile
+    env_file: .env
     volumes:
       - ../scripts:/usr/src/app/scripts
       - ./requirements.txt:/usr/src/app/requirements.txt
-      - .env:/usr/src/app/.env
       - ../sql:/usr/src/app/sql
+    command: ["cron", "-f"]
+
+  dbt:
+    build:
+      context: .
+      dockerfile: dbt/Dockerfile
+    env_file: .env
+    volumes:
+      - ../dbt:/usr/src/app/dbt
+    depends_on:
+      - postgres
     command: ["cron", "-f"]

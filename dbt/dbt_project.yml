@@ -1,12 +1,15 @@
 name: fire_incidents
 
-version: '2'
-
 profile: 'profile_for_local_deployment'
 config-version: 2
 
-source-paths: ["models"]
+model-paths: ["models"]
 test-paths: ["tests"]
 target-path: "target"
 clean-targets:
   - "target"
+
+models:
+  fire_incidents:
+  +schema: rendered_models
+  +materialized: table
